@@ -467,12 +467,12 @@ java -jar myboot-1.0.0-SNAPSHOT.jar
 从上面的例子我们可以看到，通过springboot提供的支持，我们可以在本地用`main`方法来运行程序，也可以使用`mvn spring-boot:run`来运行程序，还可以使用`java -jar xxxx.jar`来运行程序，不论哪一种，都不需要依赖外部容器。从而使springboot程序的启动和部署得到简化。
 
 ### 四、spring boot基于预测的自动化配置
-依据项目的依赖关系尽最大努力猜测可能的配置项并自动赋予缺省配置是springboot最强大的功能。在springboot之前，开发者需要显式的通过xml文件或者java configuration类来配置组建的初始化参数。如果没有配置，系统会运行异常。
-上面那个例子我没有显式的配置任何属性，但spring boot可以顺利启动并初始化tomcat容器，指定监听8080端口。是不是很神奇？
-要把尽最大努力自动化配置讲清楚，就要深入springboot的启动机制和原理了，这将会在下一篇文章一起研究。本文不做展开讨论。
+依据项目的`依赖`预测配置项并`自动设置缺省值`是springboot最强大的功能。此前，开发者需要显式的通过xml或者config类来配置应用参数。如果没有配置，系统会运行异常。
+上面的例子我没有显式的配置任何属性，但spring boot可以顺利启动并初始化tomcat容器，指定监听8080端口。是不是很神奇？
+要把尽自动化配置讲清楚，就要深入springboot的`启动机制`了，这将会在`下一篇文章`(敬请期待...)一起研究，本文不做展开讨论。
 
-通过上面三个方面的改善，大大地提高了创建一个spring应用的效率。最快捷的方式只需要三步，创建包含starter依赖的pom文件，创建一个main方法包含SpringApplication.run的java类，添加`@EnableAutoConfiguration`注解。然后就可以运行这个依据完成的spring程序了。springboot将开发者从繁琐的配置中解放出来，这是它的意义所在。
+通过以上的改善，springboot提高了创建spring应用的效率。最快捷的方式只需要三步:创建包含starter依赖的pom，创建一个main方法包含SpringApplication.run的类，添加`@EnableAutoConfiguration`注解。然后就可以运行这个spring程序了。springboot将开发者从繁琐的配置中解放出来，这是它的意义所在。
 
 ---
 <br/>
-`谢谢阅读文章，我的微信是 zxflove08，如果需要交流可以加我微信，如果你是github用户，也可以在下面进行留言`。
+`谢谢阅读文章，我的微信是 zxflove08，如果需要交流可以加我微信`。
